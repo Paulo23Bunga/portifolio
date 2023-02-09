@@ -395,7 +395,7 @@ https://templatemo.com/tm-531-reflux
             >
           </div>
 
-          <div class="list-group">
+          <div class="list-group d-none">
           <div class="list-group-item bg-transparent" v-for="(comment, index) in comments" style="border:none;">
             <span class="comment_author text-light">Autor: <strong>{{ comment.nome }}</strong></span>
             <p class="">{{ comment.sms }}<p>
@@ -477,37 +477,7 @@ https://templatemo.com/tm-531-reflux
     </div>
 
     <script type="text/javascript">
-         new Vue({
-            el: "#app",
-            data(){
-        return{
-        comments:[],
-        nome: '',
-        sms: ''
-        }
-
-      },
-      methods: {
-        AdComentario(){
-            if (this.nome.trim() === '' || this.sms.trim() === '') {
-              return;
-            }
-            this.comments.push({
-              nome: this.nome,
-              sms: this.sms
-            });
-
-        /*    this.nome = '';
-            this.sms = ''; */
-        },
-        removeComment(index){
-          /*console.log(index);
-          alert(index); */
-          this.comments.splice(index, 1);
-        }
-      }
-         }); 
-         
+     
     </script>
 
     <!--MODAL ONDE ESTAMOS-->
